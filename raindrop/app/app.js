@@ -5,7 +5,7 @@ class Drop{
         this.y = cy;
         this.rad = rad;
         this.col = col;
-        this.speed = 1 + Math.random() * 3;
+        this.speed = 2 + Math.random() * 3;
     }
     update(){
         this.y = this.y + this.speed;
@@ -31,7 +31,7 @@ class Ground{
     updateG(){}
 };
 
-let hitGround = new Ground (0,500,30,[0,5,0]);
+let hitGround = new Ground (-200,500,30,[0,5,0]);
 
 function setup(){
     createCanvas(500,500);

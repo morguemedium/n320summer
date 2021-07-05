@@ -5,33 +5,38 @@ class Drop{
         this.y = cy;
         this.rad = rad;
         this.col = col;
-        this.speed = 2 + Math.random() * 3;
+        this.speed = 3 + Math.random() * 3;
     }
     update(){
         this.y = this.y + this.speed;
-        this.speed = this.speed + .5;
+        this.speed = this.speed + .8;
         fill(this.col);
         circle(this.x,this.y,this.rad);
     }
 };
 
 var mulCircles = [];
-mulCircles[0] = new Drop(35,0,30,[171, 198, 235]);
-mulCircles[1] = new Drop(135,0,30,[171, 198, 235]);
-mulCircles[2] = new Drop(235,0,30,[171, 198, 235]);
-mulCircles[3] = new Drop(335,0,30,[171, 198, 235]);
-mulCircles[4] = new Drop(435,0, 30,[171, 198, 235]);
+mulCircles[0] = new Drop(35,0,40,[171, 198, 235]);
+mulCircles[1] = new Drop(135,0,40,[171, 198, 235]);
+mulCircles[2] = new Drop(235,0,40,[171, 198, 235]);
+mulCircles[3] = new Drop(335,0,40,[171, 198, 235]);
+mulCircles[4] = new Drop(435,0,40,[171, 198, 235]);
+
 
 class Ground{
-    constructor(gx,gy,gColor){
+    constructor(gx,gy,gRad,gColor){
         this.gx= gx;
         this.gy= gy;
+        this.gRad = gRad;
         this.gColor= gColor;
     }
-    updateG(){}
+    updateG(){
+        fill(this.gColor);
+        square(this.gx, this.gy, this.gRad);
+    }
 };
 
-let hitGround = new Ground (-200,500,30,[0,5,0]);
+let hitGround = new Ground (0,200,30,[0, 98, 235]);
 
 function setup(){
     createCanvas(500,500);
@@ -46,4 +51,4 @@ function draw(){
     mulCircles[2].update();
     mulCircles[3].update();
     mulCircles[4].update();
-}
+};

@@ -17,3 +17,5 @@ class Woodwind extends Instrument{
 };
 class Percussion extends Instrument{};
 class String extends Instrument{};
+
+let bClarinet = new Woodwind(10);

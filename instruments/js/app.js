@@ -6,7 +6,7 @@ class Instrument{
         this.verb = verb;
     }
     play(){
-        console.log("Currently " + this.verb + this.family + " at " + this.loud + " volume.");
+         console.log("Currently " + this.verb + this.family + " at " + this.loud + " volume.");
     }
 };
 
@@ -38,10 +38,14 @@ class String extends Instrument{
 };
 
 let instruments = [];
-let bClarinet = new Woodwind();
-let eDrum = new Percussion();
-let aGuitar = new String();
+instruments[0] = new Woodwind();
+instruments[1] = new Percussion();
+instruments[2] = new String();
 
-bClarinet.play();
-eDrum.play();
-aGuitar.play();
+let acGuitar = new String();
+let elDrum = new Percussion();
+let alSaxophone = new Woodwind();
+
+alSaxophone.play();
+elDrum.play();
+acGuitar.play();

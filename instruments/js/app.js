@@ -6,9 +6,11 @@ class Instrument{
         this.verb = verb;
     }
     play(){
-         console.log("Currently " + this.verb + this.family + " at " + this.loud + " volume.");
+            console.log("Currently " + this.verb + this.family + " at " + this.loud + " volume.");
     }
 };
+
+//first base
 
 class Woodwind extends Instrument{
     constructor(loud,family,verb){
@@ -37,16 +39,21 @@ class String extends Instrument{
     }
 };
 
+//subsequent classes that fit in instrument
+
 let instruments = [];
 instruments[0] = new Woodwind();
 instruments[1] = new Percussion();
 instruments[2] = new String();
 
+//array of instruments
+
 let alSaxophone = new Woodwind();
 let elDrum = new Percussion();
 let acGuitar = new String();
 
-
 alSaxophone.play();
 elDrum.play();
 acGuitar.play();
+
+//instances to test code

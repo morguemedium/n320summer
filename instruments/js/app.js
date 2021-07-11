@@ -42,9 +42,10 @@ instruments[0] = new Woodwind();
 instruments[1] = new Percussion();
 instruments[2] = new String();
 
-let acGuitar = new String();
-let elDrum = new Percussion();
 let alSaxophone = new Woodwind();
+let elDrum = new Percussion();
+let acGuitar = new String();
+
 
 alSaxophone.play();
 elDrum.play();

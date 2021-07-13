@@ -9,7 +9,7 @@ class Game{
     searchColor = "#72edcc";
     normalColor = "#bc72ed";
     gameZone = document.getElementById("gameZone");
-    
+    foundBar = new FoundBar();
     
 
     constructor(){
@@ -66,14 +66,16 @@ class Game{
 };
 
 class FoundBar {
-    element = getElementById("foundBar");
-    maxSize = 130;
+    foundBar = document.getElementById("foundBar");
+    maxSize = 700;
     percent = 0;
 
     setPercent(percent){
         this.percent = percent;
-        this.element.setAttribute("width", this.percent * this.maxSize);
+        this.foundBar.setAttribute("width", this.percent * this.maxSize);
     }
 };
 
 let g = new Game();
+
+console.log(FoundBar);

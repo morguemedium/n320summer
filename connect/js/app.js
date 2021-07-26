@@ -1,11 +1,6 @@
 class GameBoard{
-    //properties
+    //connect to index file
 
-    playerOne = 0;
-    playerTwo = 0;
-    playerOneTokens = 0;
-    playerTwoTokens = 0;
-    maxTokens = 0;
     gameBoard = document.getElementById("gameBoard");
 
     constructor(){
@@ -24,6 +19,7 @@ class GameBoard{
         }
     }
 }
-}
+};
+
 
 let g = new GameBoard();

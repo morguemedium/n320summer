@@ -36,7 +36,7 @@ class GameBoard{
 };
 
 function changeToken(event){
-    event.target.getAttribute("player-one");
+    event.target.setAttribute("fill", "#f28889");
     
 }
 

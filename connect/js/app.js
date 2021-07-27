@@ -13,6 +13,7 @@ class GameBoard{
             blankCirc.setAttribute("cy", 90 * q);
             blankCirc.setAttribute("r", 30);
             blankCirc.setAttribute("fill", "#f5eded");
+            blankCirc.addEventListener("click",changeToken);
             this.gameBoard.appendChild(blankCirc);
 
             console.log("help me");
@@ -21,5 +22,23 @@ class GameBoard{
 }
 };
 
+function changeToken(event){
+    event.target.setAttribute("dataset", "selectedOne");
+};
+
+class PlayerClass{
+    constructor(currentP, tokenCol){
+        this.currentP = currentP;
+        this.tokenCol = tokenCol;
+    }
+    moveToken(){
+        console.log("Currently setting up player function");
+    }
+};
+
+let playerOne = new PlayerClass(1, "#f28889");
+let playerTwo = new PlayerClass(2, "#88f292");
 
 let g = new GameBoard();
+playerOne.moveToken();
+playerTwo.moveToken();

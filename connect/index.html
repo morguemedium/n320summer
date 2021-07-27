@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect 4 Attempt</title>
+    <style>
+        .selectedOne{
+            animation-name: selectedAnim;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes selectedAnim{
+            from{background-color: "#f5eded"}
+            to{background-color: "#c688f2"}
+        }
+    </style>
 </head>
 <body>
     <svg id="gameBoard" height="800" width="800" style="background-color: #5071c7;" padding="5">

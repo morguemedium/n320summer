@@ -11,37 +11,32 @@ class GameBoard{
             for(var q = 1; q < 7; q++){
             let blankCirc = document.createElementNS("http://www.w3.org/2000/svg","circle");
             
+             let blankVal = [0,1,2,3,4,5,6,
+                        7,8,9,10,11,12,13,
+                        14,15,16,17,18,19,20,
+                        21,22,23,24,25,26,27,
+                        28,29,30,31,32,33,34,
+                        35,36,37,38,39,40,41];
+
+
             blankCirc.classList.add("boardCirc");
             blankCirc.setAttribute("cx", 110 * c);
             blankCirc.setAttribute("cy", 90 * q);
             blankCirc.setAttribute("r", 30);
             blankCirc.setAttribute("fill", "#f5eded");
             blankCirc.addEventListener("click",changeToken);
-
-            for (let s = 0; s < blankCirc.length; s++){
-                blankCirc[s].onclick = () => {
-                    if (blankCirc[s + 7]){
-                        blankCirc[s].classList.add("selected");
-                        blankCirc[s].classList.add("player-one");
-                        currentPlayer = 2;
-                    } else if(this.currentPlayer = 2){
-                        blankCirc[s].classList.add("selected");
-                        blankCirc[s].classList.add("player-two");
-                    }
-                }
-            }
            
             this.gameBoard.appendChild(blankCirc);
 
 
-            console.log("help me");
+            console.log("help");
         }
     }
 }
 };
 
 function changeToken(event){
-    event.target.getAttribute("fill", "#d488f2");
+    event.target.getAttribute("player-one");
     
 }
 

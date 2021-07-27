@@ -4,6 +4,7 @@ class GameBoard{
     gameBoard = document.getElementById("gameBoard");
 
     constructor(){
+        
         //let's make the grid
         for(var c = 1; c < 7; c++){
             for(var q = 1; q < 7; q++){
@@ -14,6 +15,7 @@ class GameBoard{
             blankCirc.setAttribute("r", 30);
             blankCirc.setAttribute("fill", "#f5eded");
             blankCirc.addEventListener("click",changeToken);
+           
             this.gameBoard.appendChild(blankCirc);
 
             console.log("help me");
@@ -23,22 +25,24 @@ class GameBoard{
 };
 
 function changeToken(event){
-    event.target.setAttribute("dataset", "selectedOne");
-};
+    let currentPlayer = 1;
+    event.target.setAttribute("fill", "#d988f2");
+    
+}
 
 class PlayerClass{
     constructor(currentP, tokenCol){
         this.currentP = currentP;
         this.tokenCol = tokenCol;
     }
-    moveToken(){
-        console.log("Currently setting up player function");
+    updateColor(){
+        console.log("Player class");
     }
-};
+}
 
 let playerOne = new PlayerClass(1, "#f28889");
 let playerTwo = new PlayerClass(2, "#88f292");
 
 let g = new GameBoard();
-playerOne.moveToken();
-playerTwo.moveToken();
+playerOne.updateColor();
+playerTwo.updateColor();
